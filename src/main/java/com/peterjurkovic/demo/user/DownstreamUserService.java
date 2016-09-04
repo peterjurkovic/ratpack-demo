@@ -20,25 +20,34 @@ public class DownstreamUserService {
 	
 	private HttpClient httpClient;
 	private ObjectMapper mapper;
-	private URI downstreamServerUri;
+	private URI slowUserUri;
+	private URI fastUserUri;
 	
 	@Inject
 	public DownstreamUserService(HttpClient httpClient, Config config, ObjectMapper mapper) {
 		this.httpClient = httpClient;
 		this.mapper = mapper;
 		try {
-			downstreamServerUri = new URI("http://" + config.getHost() + ":" + config.getPort() + "/endpoint");
+			slowUserUri = new URI("http://" + config.getHost() + ":" + config.getPort() + "/slow-endpoint");
+			fastUserUri = new URI("http://" + config.getHost() + ":" + config.getPort() + "/fast-endpoint");
 		} catch (URISyntaxException e) {
 			log.error("",e);
 			throw new RuntimeException(e);
 		}
 	}
 	
-	public Promise<User> load(){
-		return httpClient.get( downstreamServerUri )
+	public Promise<User> loadSlowUser(){
+		return load( slowUserUri );
+	}
+	
+	public Promise<User> loadFastUser(){
+		return load( fastUserUri );
+	}
+	
+	public Promise<User> load(URI uri){
+		return httpClient.get( uri )
 				.onError(e -> log.info("Error",e))
-				.map( res -> mapper.readValue(res.getBody().getBytes(), User.class));
-				
+				.map( res -> mapper.readValue(res.getBody().getBytes(), User.class));		
 	}
 	
 }

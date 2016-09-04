@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.peterjurkovic.demo.user.DownstreamUserService;
+import com.peterjurkovic.demo.user.GetUserHandler;
 import com.peterjurkovic.demo.user.UserModule;
 
 import ratpack.guice.Guice;
@@ -27,10 +28,20 @@ public class App {
 			 )
 			 .registry(Guice.registry(bindings -> bindings.module(UserModule.class)) )
 			 .handlers( chain -> chain
-				 .get("user", c -> {
-					 DownstreamUserService service = c.get(DownstreamUserService.class);
-					 service.load().then( user -> c.render( json(user) ));
-				 })	
+					 .get("user/:username", GetUserHandler.class)
+					 .get("slow-user", ctx -> {
+						 ctx.getResponse().getHeaders().set("Connection", "Keep-Alive");
+						 ctx.get(DownstreamUserService.class)
+						 	.loadSlowUser()
+						 	.then( user -> ctx.render( json(user) ));
+					 })	
+					 .get("fast-user", ctx -> {
+						 ctx.getResponse().getHeaders().set("Connection", "Keep-Alive");
+						 ctx.get(DownstreamUserService.class)
+						 	.loadFastUser()
+						 	.then( user -> ctx.render( json(user) ));
+					 })	
+					  
 			 )
 		);
 	}

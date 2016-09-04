@@ -10,6 +10,7 @@ public class UserModule  extends AbstractModule{
 		bind(DownstreamUserService.class);
 		bind(PostUserHandler.class);
 		bind(GetUserHandler.class);
+		bind(BlockingDbService.class);
 	}
 
 }
