@@ -12,7 +12,7 @@ import ratpack.test.embed.EmbeddedApp;
 
 public class ConfigApp {
 
-static Logger log = LoggerFactory.getLogger(App.class); 
+	static Logger log = LoggerFactory.getLogger(App.class); 
 	
 	public static void main(String[] args) throws Exception {
 		EmbeddedApp.of(s -> s 

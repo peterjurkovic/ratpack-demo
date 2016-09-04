@@ -3,6 +3,7 @@ bin
 *.ipr
 *.iml
 *.iws
+.idea/
 .gradle/
 gradle/
 .settings/
