@@ -10,7 +10,7 @@ buildscript {
 
 apply plugin: "io.ratpack.ratpack-java"
 apply plugin: 'com.github.johnrengelman.shadow'
-apply plugin: 'idea'
+
 
 repositories {
   jcenter()
@@ -20,22 +20,19 @@ dependencies {
   
   compile ratpack.dependency("guice")
   compile ratpack.dependency("test")
-  compile ratpack.dependency("hikari")
   
   compile 'ch.qos.logback:logback-classic:1.1.7'
   compile 'org.slf4j:log4j-over-slf4j:1.7.21'
-  compile 'org.postgresql:postgresql:9.4.1209.jre7'
+  compile 'com.github.tomakehurst:wiremock:2.1.12'
   
-  
-  // compile group: 'com.github.tomakehurst', name: 'wiremock', version: '2.1.11'
-  
+    
   testCompile 'junit:junit:4.12'
-  testCompile 'org.assertj:assertj-core:3.5.2'// https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path
+  testCompile 'org.assertj:assertj-core:3.5.2'
   testCompile 'com.jayway.jsonpath:json-path:2.2.0'
   testCompile 'net.javacrumbs.json-unit:json-unit-fluent:1.15.0'
-
-
+  testCompile 'pl.pragmatists:JUnitParams:1.0.5'
+  
   
 }
 
-mainClassName = "com.peterjurkovic.demo.App"
+mainClassName = "com.peterjurkovic.upstream.Server"
