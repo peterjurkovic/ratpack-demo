@@ -16,4 +16,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'ratpack-demo1'
+rootProject.name = 'ratpack-demo'

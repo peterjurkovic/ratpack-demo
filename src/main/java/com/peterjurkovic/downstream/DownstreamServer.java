@@ -24,7 +24,7 @@ public class DownstreamServer {
         				aResponse()
 	    				.withHeader("Content-Type", "application/json")
 	    				.withBody( USER_JSON )
-	    				.withFixedDelay(100)
+	    				.withFixedDelay(3000)
     		));
 
         wireMockServer.start();
