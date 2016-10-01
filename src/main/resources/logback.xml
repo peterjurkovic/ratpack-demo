@@ -6,15 +6,21 @@
         </encoder>
     </appender>
 
-    <logger name="com.peterjurkovic" level="DEBUG" >
-    	<appender-ref ref="STDOUT"/>
-    </logger>
-    
-    <logger name="io.netty" level="INFO" >
-    	<appender-ref ref="STDOUT"/>
-    </logger>
 
-    <root level="WARN">
+    <logger name="com.peterjurkovic" level="DEBUG" />
+    
+<!--     	<appender-ref ref="STDOUT"/> -->
+<!--     </logger> -->
+    
+<!--     <logger name="ch.qos.logback" level="WARN" > -->
+<!--     	<appender-ref ref="STDOUT"/> -->
+<!--     </logger> -->
+    
+<!--     <logger name="io.netty" level="INFO" > -->
+<!--     	<appender-ref ref="STDOUT"/> -->
+<!--     </logger> -->
+
+    <root level="INFO">
         <appender-ref ref="STDOUT"/>
     </root>
 </configuration>

@@ -1,0 +1,4 @@
+database:
+ username: username-yml
+ password: password-yml
+ port: 5555
