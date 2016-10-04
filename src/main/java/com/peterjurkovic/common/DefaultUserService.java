@@ -1,10 +1,12 @@
-package com.peterjurkovic.demo.user;
+package com.peterjurkovic.common;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.peterjurkovic.upstream.User;
 
 import ratpack.exec.Blocking;
 import ratpack.exec.Promise;

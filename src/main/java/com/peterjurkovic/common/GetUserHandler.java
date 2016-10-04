@@ -1,4 +1,4 @@
-package com.peterjurkovic.demo.user;
+package com.peterjurkovic.common;
 
 import static ratpack.jackson.Jackson.json;
 
@@ -6,6 +6,8 @@ import javax.inject.Inject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.peterjurkovic.upstream.User;
 
 import ratpack.exec.Blocking;
 import ratpack.handling.Context;

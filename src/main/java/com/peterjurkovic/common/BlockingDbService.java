@@ -1,4 +1,6 @@
-package com.peterjurkovic.demo.user;
+package com.peterjurkovic.common;
+
+import com.peterjurkovic.upstream.User;
 
 public class BlockingDbService {
 

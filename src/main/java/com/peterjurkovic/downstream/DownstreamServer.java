@@ -19,10 +19,11 @@ public class DownstreamServer {
 				.withBody("DATA")
 				.withFixedDelay(100)));
         
-        wireMockServer.stubFor(get(urlEqualTo("/endpoint"))
+        wireMockServer.stubFor(get(urlEqualTo("/slow-endpoint"))
         		.willReturn(
         				aResponse()
-	    				.withHeader("Content-Type", "application/json")
+        				.withHeader("Content-Type", "application/json")
+        				.withHeader("Content-Length", String.valueOf(USER_JSON.length()))
 	    				.withBody( USER_JSON )
 	    				.withFixedDelay(3000)
     		));

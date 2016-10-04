@@ -1,11 +1,12 @@
-package com.peterjurkovic.upstream.handler;
+package com.peterjurkovic.versioning;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import com.peterjurkovic.upstream.handler.UserAgentVersioningHandler.ClientVersion;
+import com.peterjurkovic.versioning.UserAgentVersioningHandler;
+import com.peterjurkovic.versioning.UserAgentVersioningHandler.ClientVersion;
 
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;

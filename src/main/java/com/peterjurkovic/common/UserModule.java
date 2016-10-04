@@ -1,3 +1,4 @@
+package com.peterjurkovic.common;
 //package com.peterjurkovic.demo.user;
 //
 //import com.google.inject.AbstractModule;

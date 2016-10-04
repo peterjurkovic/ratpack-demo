@@ -3,17 +3,11 @@ package com.peterjurkovic;
 import java.util.Collections;
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.peterjurkovic.config.ConfigExample;
-
 import ratpack.exec.Blocking;
 import ratpack.server.RatpackServer;
 
 public class ExecutionModelExample {
 	
-	static Logger LOG = LoggerFactory.getLogger(ConfigExample.class); 
 	
 	static UserService userService = new UserService();
 	

@@ -1,4 +1,4 @@
-package com.peterjurkovic.demo.user;
+package com.peterjurkovic.upstream;
 
 public class User {
 

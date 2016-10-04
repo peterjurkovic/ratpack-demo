@@ -1,6 +1,6 @@
-package com.peterjurkovic.upstream.handler;
+package com.peterjurkovic.versioning;
 
-import static com.peterjurkovic.upstream.handler.BaseResponse.error;
+import static com.peterjurkovic.versioning.BaseResponse.error;
 import static io.netty.handler.codec.http.HttpResponseStatus.BAD_REQUEST;
 import static ratpack.jackson.Jackson.json;
 

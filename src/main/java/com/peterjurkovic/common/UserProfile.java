@@ -1,4 +1,4 @@
-package com.peterjurkovic.demo.user;
+package com.peterjurkovic.common;
 
 public class UserProfile {
 

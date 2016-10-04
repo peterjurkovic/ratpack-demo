@@ -1,9 +1,11 @@
-package com.peterjurkovic.demo.user;
+package com.peterjurkovic.common;
 
 import javax.inject.Inject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.peterjurkovic.upstream.User;
 
 import ratpack.handling.Context;
 import ratpack.handling.Handler;

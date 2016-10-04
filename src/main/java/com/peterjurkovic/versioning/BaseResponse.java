@@ -1,4 +1,4 @@
-package com.peterjurkovic.upstream.handler;
+package com.peterjurkovic.versioning;
 
 public class BaseResponse {
 

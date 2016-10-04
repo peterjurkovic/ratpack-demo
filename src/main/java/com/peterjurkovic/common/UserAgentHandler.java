@@ -1,4 +1,4 @@
-package com.peterjurkovic.demo.componet;
+package com.peterjurkovic.common;
 
 import ratpack.handling.Context;
 import ratpack.handling.Handler;
