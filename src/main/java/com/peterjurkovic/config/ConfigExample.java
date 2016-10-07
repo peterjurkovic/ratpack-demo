@@ -10,7 +10,7 @@ import ratpack.test.embed.EmbeddedApp;
 
 public class ConfigExample {
 
-	static Logger log = LoggerFactory.getLogger(ConfigExample.class); 
+	static Logger LOG = LoggerFactory.getLogger(ConfigExample.class); 
 		
 	public static void main(String[] args) throws Exception {
 		EmbeddedApp.of(s -> s 
@@ -30,7 +30,7 @@ public class ConfigExample {
 		).test( httpClient -> {
 		     String response = httpClient.get("/config").getBody().getText();
 		     
-		     log.debug( response );
+		     LOG.debug( response );
 		     
 		     assertThatJson( response )
 			     .node("serviceUrl").isEqualTo("http://localhost:1234")
