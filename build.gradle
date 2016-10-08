@@ -31,6 +31,7 @@ dependencies {
   testCompile 'com.jayway.jsonpath:json-path:2.2.0'
   testCompile 'net.javacrumbs.json-unit:json-unit-fluent:1.15.0'
   testCompile 'pl.pragmatists:JUnitParams:1.0.5'
+  testCompile 'org.mockito:mockito-all:1.9.5'
   
   
 }
