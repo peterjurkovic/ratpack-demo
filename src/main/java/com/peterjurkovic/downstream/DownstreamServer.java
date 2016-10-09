@@ -11,7 +11,7 @@ public class DownstreamServer {
 
 	 private WireMockServer wireMockServer = new WireMockServer(wireMockConfig().port(9999));
 	 
-	 private final static String USER_JSON = Json.write(new User("Peter", "peter.jurkovic@nexmo.com"));
+	 private final static String USER_JSON = Json.write(new User("Peter", "my@email.com"));
 
     public void start() {
         wireMockServer.stubFor(get(urlEqualTo("/ping"))

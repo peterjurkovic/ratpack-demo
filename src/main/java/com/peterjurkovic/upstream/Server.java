@@ -10,7 +10,7 @@ public class Server {
 			.serverConfig( config -> config.threads( 1 ))	
 			.registry(Guice.registry( b -> b.module( UserModule.class )))	
 			.handlers( chain -> chain
-				.get("slow-endpoint", UserHandler.class)
+				.get(UserHandler.class)
 			)
 		);
 	}
